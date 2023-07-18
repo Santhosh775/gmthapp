@@ -1,0 +1,31 @@
+<!-- login.page.html -->
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Login</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="login-container">
+    <ion-list>
+      <form (ngSubmit)="login()" #loginForm="ngForm">
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input [(ngModel)]="email" name="email" type="email" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input [(ngModel)]="password" name="password" type="password" required></ion-input>
+        </ion-item>
+        <div class="error-message" *ngIf="loginForm.submitted && loginForm.invalid">
+          Please enter valid email and password.
+        </div>
+        <ion-button expand="full" type="submit">Login</ion-button>
+      </form>
+    </ion-list>
+    <p class="register-link ion-text-center">Don't have an account? <a routerLink="/register">Register</a></p>
+  </div>
+</ion-content>

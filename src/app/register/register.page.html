@@ -1,0 +1,52 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Register</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">First Name</ion-label>
+          <ion-input type="text" [(ngModel)]="firstName" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Last Name</ion-label>
+          <ion-input type="text" [(ngModel)]="lastName" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Email</ion-label>
+          <ion-input type="email" [(ngModel)]="email" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Mobile No</ion-label>
+          <ion-input type="tel" [(ngModel)]="mobileNo" pattern="[0-9]{10}" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Passport No</ion-label>
+          <ion-input type="text" [(ngModel)]="passportNo" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Password</ion-label>
+          <ion-input type="password" [(ngModel)]="password" required></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="floating">Confirm Password</ion-label>
+          <ion-input type="password" [(ngModel)]="confirmPassword" required></ion-input>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+
+
+  <div class="button-container">
+    <ion-button expand="full"  (click)="register()" >Register</ion-button>
+  </div>
+
+  <p>Already have an account? <a routerLink="/login">Login</a></p>
+</ion-content>
