@@ -1,8 +1,21 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
+import { LoginPage } from './login/login.page';
 
 const routes: Routes = [
+    {
+      path: 'splash',
+      loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
+    },
+    {
+      path: 'login',
+      loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
+    },
+    {
+      path: 'register',
+      loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+    },
   {
     path: '',
     loadChildren: () =>
@@ -29,17 +42,10 @@ const routes: Routes = [
     loadChildren: () => import('./contact-us/contact-us.module').then( m => m.ContactUsPageModule)
   },
   {
-    path: 'login',
-    loadChildren: () => import('./login/login.module').then( m => m.LoginPageModule)
-  },
-  {
-    path: 'register',
-    loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
-  },
-  {
     path: 'alltreatments',
     loadChildren: () => import('./alltreatments/alltreatments.module').then( m => m.AlltreatmentsPageModule)
   },
+  
   
 ];
 

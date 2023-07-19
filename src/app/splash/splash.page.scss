@@ -1,0 +1,48 @@
+ion-content {
+
+    --background:#002e5b;
+}
+
+
+@-webkit-keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}@keyframes rotate-center{0%{-webkit-transform:rotate(0);transform:rotate(0)}100%{-webkit-transform:rotate(360deg);transform:rotate(360deg)}}
+.container {
+
+    -webkit-animation:rotate-center .6s ease-in-out both;animation:rotate-center .6s ease-in-out both;
+
+img{
+
+    
+    height: 150px;
+  margin-top: 140px;
+  margin-bottom: 180px;
+}
+
+
+
+}
+
+
+
+.appname{
+
+
+
+    ion-text{
+
+font-size: 20px;
+font-style: bold;
+font-weight: bold;
+    text-align: center;
+    color: wheat;
+    margin-left: 100px;
+ 
+
+    }
+}
+
+.hh{
+
+
+    width: 100%;
+    text-align:center ;
+}

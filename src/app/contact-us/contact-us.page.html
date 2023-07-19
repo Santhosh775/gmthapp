@@ -1,16 +1,102 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/"></ion-back-button>
-    </ion-buttons>
-    <ion-title>contact-us</ion-title>
+    <ion-title>contact</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
   <ion-header collapse="condense">
     <ion-toolbar>
-      <ion-title size="large">contact-us</ion-title>
+      <ion-title size="large">contact</ion-title>
     </ion-toolbar>
   </ion-header>
+
+<img src="../../assets/contact-us.jpg" > 
+
+<ion-content class="pp">
+
+  <h4 class="head">Contact us  </h4>
+
+
+  <ion-card color="primary">
+    <ion-card-header>
+      <ion-card-title>Malaysia Corporate Office</ion-card-title>
+      <ion-card-subtitle>GLOBAL MEDICAL TOURISM HOSPITALS SDN.BHD.(1390142-H)</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content> +60 10-884 1925 </ion-card-content>
+
+    
+    <ion-card-content>No.9, Jalan Vervea 5, Vervea, 14110, Bandar Cassia, Pulau Pinang, MALAYSIA </ion-card-content>
+
+    
+    <ion-card-content> hello@gmth.world </ion-card-content>
+
+    </ion-card>
+
+  <ion-card color="primary">
+    <ion-card-header>
+      <ion-card-title>India Corporate Office</ion-card-title>
+      <ion-card-subtitle>GMTH PRIVATE LIMITED</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content> +91 9710233790 </ion-card-content>
+
+    
+    <ion-card-content>No.20/161, Karuneegar St, Adambakkam, Chennai, Tamil Nadu, INDIA- 600088. </ion-card-content>
+
+    
+    <ion-card-content> hello@gmth.world</ion-card-content>
+
+    
+    
+  </ion-card>
+
+  
 </ion-content>
+
+<ion-content>
+  <h4 class="head1"> Quick Enquiry  </h4>
+  <form (ngSubmit)="register()">
+
+    <ion-item>
+      <ion-label position="floating">Name</ion-label>
+      <ion-input type="text" [(ngModel)]="name" name="name" required></ion-input>
+    </ion-item>
+
+
+    <ion-item>
+      <ion-label position="floating">Email</ion-label>
+      <ion-input type="email" [(ngModel)]="email" name="email" required></ion-input>
+    </ion-item>
+    
+    
+ 
+    <ion-item>
+      <ion-label position="floating">Mobile Number</ion-label>
+      <ion-input type="number" [(ngModel)]="mobile" name="mobile" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Subject</ion-label>
+      <ion-input type="number" [(ngModel)]="subject" name="subject" required></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label position="floating">Message</ion-label>
+      <ion-textarea
+      placeholder="Type something here"
+      [autoGrow]="true"
+        ></ion-textarea>
+    </ion-item>
+    
+    <ion-button type="submit" expand="full">Submit</ion-button>
+
+
+</form>
+
+
+
+</ion-content>
+
+

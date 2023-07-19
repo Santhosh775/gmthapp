@@ -9,13 +9,12 @@ import { NavController } from '@ionic/angular';
 export class LoginPage {
   email!: string;
   password!: string;
+  router: any;
 
   constructor(private navCtrl: NavController) {}
 
   login() {
    
-    if (this.email && this.password) {
-      this.navCtrl.navigateRoot('/home');
+    this.router.navigate(['/home']);
     }
   }
-}
